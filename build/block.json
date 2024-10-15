@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/hero-block",
+  "version": "0.1.0",
+  "title": "Hero Block",
+  "category": "design",
+  "description": "Hero block made with create-block",
+  "example": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Tytuł"
+    },
+    "text": {
+      "type": "string",
+      "default": "Opis"
+    },
+    "buttons": {
+      "type": "array",
+      "default": [
+        {
+          "text": "Przycisk 1",
+          "url": "#0",
+          "style": "button--full",
+          "show": true
+        },
+        {
+          "text": "Przycisk 2",
+          "url": "#0",
+          "style": "button--full",
+          "show": true
+        }
+      ]
+    },
+    "image": {
+      "type": "object",
+      "default": {
+        "id": 0,
+        "url": "https://placehold.co/1920",
+        "alt": "Hero image",
+        "srcSet": "https://placehold.co/1920 1920w, https://placehold.co/1280 1280w, https://placehold.co/640 640w"
+      }
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showText": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "hero-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
